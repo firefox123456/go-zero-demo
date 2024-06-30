@@ -1,0 +1,45 @@
+syntax = "v1"
+
+info (
+	author: "huangqi"
+	date:   "2024-6-26"
+	desc:   "api语法示例及语法说明"
+)
+
+type (
+	UserInfoReq {
+		Id int64 `json:"id"`
+	}
+	UserInfoResp {
+		Id   int64  `json:"id"`
+		Name string `json:"name"`
+		Age  int64  `json:"age"`
+	}
+	UserUpdateReq {
+		Id   int64  `json:"id"`
+		Name string `json:"name"`
+		Age  int64  `json:"age"`
+	}
+	UserUpdateRsp {
+		Flag bool `json:"flag"`
+	}
+)
+
+@server (
+	//包名称
+	group: user
+	//路由前缀
+	prefix: api
+	//middleware 类似与过滤器和拦截器 aop
+	middleware: TestMiddleware
+)
+service user-api {
+	@doc "获取用户信息"
+	@handler userInfo
+	post /user/info (UserInfoReq) returns (UserInfoResp)
+
+	@doc "修改用户信息"
+	@handler userUpdate
+	post /user/update (UserUpdateReq) returns (UserUpdateRsp)
+}
+

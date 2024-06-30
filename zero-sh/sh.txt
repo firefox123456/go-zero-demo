@@ -1,0 +1,23 @@
+//安装goctl
+go install github.com/zeromicro/go-zero/tools/goctl@latest
+
+//goctl安装全套环境
+go env check -i -f
+
+//生产api命令
+goctl api go -api *.api -dir ../ --style=goZero
+
+//打包docker命令
+goctl docker -go *.go
+
+//k8s yaml文件命令
+goctl kube deploy -name user-api -namespace zero-demo -image user-api:v1.0 -o user-api.yaml -port 10001 -nodePort 30001
+
+//rpc命令生成
+goctl rpc protoc *.proto --go_out=../ --go-grpc_out=../  --zrpc_out=../ --style=goZero
+
+//model命令生成
+goctl model mysql datasource -url="root:12345678\!@tcp(localhost:3306)/go_zero_demo" -table="user" -dir="./genModel" -cache=false --style=goZero
+
+//生成md格式文档
+goctl api doc --dir ./ -o ../docs

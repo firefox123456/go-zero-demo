@@ -1,0 +1,4 @@
+{"@timestamp":"2024-06-28T16:18:27.957+08:00","caller":"user/userInfoLogic.go:35","content":"我故意的！！！！","level":"error"}
+{"@timestamp":"2024-06-28T16:19:22.990+08:00","caller":"user/userInfoLogic.go:35","content":"我故意的！！！！","level":"error"}
+{"@timestamp":"2024-06-28T16:20:19.150+08:00","caller":"user/userInfoLogic.go:35","content":"我故意的！！！！","level":"error"}
+2024-06-28T16:33:24.138+08:00	[31;1m error [0;22m	我故意的！！！！	caller=user/userInfoLogic.go:35

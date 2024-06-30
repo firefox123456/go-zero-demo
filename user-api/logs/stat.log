@@ -1,0 +1,4 @@
+2024-06-28T16:34:20.621+08:00	[32;1m stat [0;22m	CPU: 0m, MEMORY: Alloc=1.9Mi, TotalAlloc=1.9Mi, Sys=14.8Mi, NumGC=0	caller=stat/usage.go:61
+2024-06-28T16:34:20.625+08:00	[32;1m stat [0;22m	(api) shedding_stat [1m], cpu: 0, total: 1, pass: 1, drop: 0	caller=load/sheddingstat.go:61
+2024-06-28T16:34:24.139+08:00	[32;1m stat [0;22m	(user-api) - qps: 0.0/s, drops: 0, avg time: 13.0ms, med: 13.8ms, 90th: 13.8ms, 99th: 13.8ms, 99.9th: 13.8ms	caller=stat/metrics.go:210
+2024-06-28T16:34:28.119+08:00	[32;1m stat [0;22m	(user-api) - qps: 0.0/s, drops: 0, avg time: 0.0ms, med: 0.0ms, 90th: 0.0ms, 99th: 0.0ms, 99.9th: 0.0ms	caller=stat/metrics.go:210

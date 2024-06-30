@@ -1,0 +1,18 @@
+Name: user-api
+Host: 0.0.0.0
+Port: 8888
+
+#自定义db配置
+DB:
+  Mysql: root:12345678!@tcp(localhost:3306)/go_zero_demo?charset=utf8mb4&parseTime=true&loc=Local
+
+#日志配置
+Log:
+  ServiceName: user-api
+  Mode: console
+  Path: logs
+  Level: info
+  Encoding: plain
+  #日志压缩配置
+  Compress: true
+  KeepDays: 1
